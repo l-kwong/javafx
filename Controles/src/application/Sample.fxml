@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="300.0" prefWidth="500.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="application.SampleController">
+   <children>
+      <TabPane prefHeight="300.0" prefWidth="500.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+            <Tab text="CheckBoxes">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <CheckBox fx:id="chkOui" layoutX="97.0" layoutY="53.0" mnemonicParsing="false" onAction="#checkSelect" text="Oui" />
+                        <CheckBox fx:id="chkNon" layoutX="97.0" layoutY="95.0" mnemonicParsing="false" onAction="#checkSelect" text="Non" />
+                        <Label fx:id="lblCheck" layoutX="175.0" layoutY="153.0" prefHeight="17.0" prefWidth="143.0" text="Label" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="RadioButtons">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <RadioButton fx:id="rdoOui" layoutX="81.0" layoutY="49.0" mnemonicParsing="false" selected="true" text="Oui">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="Choix" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton fx:id="rdoNon" layoutX="80.0" layoutY="91.0" mnemonicParsing="false" text="Non" toggleGroup="$Choix" />
+                        <RadioButton fx:id="rdoPeut" layoutX="81.0" layoutY="129.0" mnemonicParsing="false" text="Peut être" toggleGroup="$Choix" />
+                        <Label fx:id="lblRadio" layoutX="230.0" layoutY="157.0" prefHeight="17.0" prefWidth="77.0" text="Label" />
+                        <Button layoutX="143.0" layoutY="214.0" mnemonicParsing="false" onAction="#radioSelect" text="Button" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+          <Tab text="TextBox">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextField fx:id="txtNom" layoutX="89.0" layoutY="52.0" promptText="Mettre le nom" />
+                        <Button fx:id="btnValider" layoutX="275.0" layoutY="52.0" mnemonicParsing="false" onAction="#txtNomAffiche" text="Valider" />
+                        <Label fx:id="lblNom" layoutX="133.0" layoutY="128.0" prefHeight="25.0" prefWidth="186.0" text="Label" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab onSelectionChanged="#choixDate" text="DatePicker">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextField fx:id="txtDate" layoutX="89.0" layoutY="126.0" />
+                        <DatePicker fx:id="dte" layoutX="89.0" layoutY="58.0" onAction="#choixDate" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="ComboBox">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ComboBox fx:id="cboChoix" layoutX="101.0" layoutY="54.0" onAction="#comboBoxChanged" prefHeight="27.0" prefWidth="197.0" promptText="Choisir une couleur" />
+                        <TextField fx:id="txtChoix" layoutX="95.0" layoutY="135.0" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Image">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="140.0" layoutY="63.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Unknown.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
